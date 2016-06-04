@@ -67,12 +67,3 @@ print 'list_a.reverse() =', list_a
 print '\n', list_a.sort.__doc__, '\n'
 list_a.sort()
 print 'list_a.sort() =', list_a
-
-print '\n', '引用类型和值类型的区别'
-list_b = list_a
-print 'list_a =', list_a
-print 'list_b =', list_b
-list_b.reverse()
-print 'list_b.reverse()'
-print 'list_a =', list_a
-print 'list_b =', list_b
