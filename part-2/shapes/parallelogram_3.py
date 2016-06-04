@@ -11,6 +11,9 @@ class Shape(object):
     def getLength(self):
         return self.length
 
+    def getDeg(self):
+        return 0
+
     def getName(self): pass
 
 class Parallelogram(Shape):
