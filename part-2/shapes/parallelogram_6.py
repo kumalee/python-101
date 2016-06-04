@@ -1,6 +1,8 @@
 #! /usr/bin/python
 # encoding: utf-8
 
+import math
+
 class Parallelogram(object):
     def __init__(self, width, height, deg):
         self.length = width, height
@@ -19,7 +21,7 @@ class Parallelogram(object):
         return self.deg
 
     def getArea(self):
-        return self.length[0] * self.length[1]
+        return self.length[0] * self.length[1] * math.sin(math.radians(self.deg))
 
     def getName(self):
         if self.length[0] == self.length[1] and self.deg == 90:

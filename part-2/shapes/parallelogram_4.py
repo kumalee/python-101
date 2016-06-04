@@ -1,6 +1,8 @@
 #! /usr/bin/python
 # encoding: utf-8
 
+import math
+
 class Shape(object):
     def __init__(self, width, height):
         self.length = width, height
@@ -14,7 +16,7 @@ class Shape(object):
     def getName(self): pass
 
     def getArea(self):
-        return self.length[0] * self.length[1]
+        return self.length[0] * self.length[1] * math.sin(math.radians(self.deg))
 
 class Parallelogram(Shape):
     def __init__(self, width, height, deg):
