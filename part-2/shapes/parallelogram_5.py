@@ -21,11 +21,11 @@ class Shape(object):
     def getArea(self):
         return self.length[0] * self.length[1] * math.sin(math.radians(self.getDeg()))
 
-    def isSame(self, shape2):
-        return self.getLength() == shape2.getLength() and \
-            self.getDeg() == shape2.getDeg() and \
-            self.getName() == shape2.getName() and \
-            self.getArea() == shape2.getArea()
+    @classmethod
+    def isSame(cls, shape1, shape2):
+        return shape1.getLength() == shape2.getLength() and \
+            shape1.getDeg() == shape2.getDeg() and \
+            shape1.getName() == shape2.getName()
 
 class Parallelogram(Shape):
     def __init__(self, width, height, deg):
@@ -66,6 +66,6 @@ ro = Rectangle(50, 50)
 so = Sqaure(50)
 so2 = Sqaure(50)
 
-print so.isSame(ro)
-print so.isSame(po)
-print so.isSame(so2)
+print Shape.isSame(so,ro)
+print Shape.isSame(so,po)
+print Shape.isSame(so,so2)
